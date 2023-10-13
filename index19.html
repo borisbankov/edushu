@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<!-- задача: обходете масива от обекти и задайте стойностите на подходящите полета/елементи в html структурата -->
+		<script>
+		document.addEventListener("DOMContentLoaded", function(event){
+
+			const obj = [{
+				"title": "The Imitation Game",
+				"rating": "8.0",
+				"poster": "https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_UX182_CR0,0,182,268_AL_.jpg"
+				},
+				{
+				"title": "The Big Short",
+				"rating": "7.8",
+				"poster": "https://m.media-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg"
+				},
+				{
+				"title": "Overlord",
+				"rating": "7.2",
+				"poster": "https://m.media-amazon.com/images/M/MV5BNzU0NTI1MTU2M15BMl5BanBnXkFtZTgwNTg4MDIzNjM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+			 	}];
+
+                let heading = document.querySelectorAll('h3');
+                let img = document.querySelectorAll('img');
+                let sp = document.querySelectorAll('span');
+
+                for(let i = 0; i < obj.length; i++){
+                    heading[i].innerText = obj[i].title;
+                    img[i].src = obj[i].poster;
+                    sp[i].innerText = obj[i].rating;
+                }
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-auto card">
+					<h3></h3>
+					<img src="" alt="" class="">
+					<span class="badge text-bg-dark"></span>
+				</div>
+				<div class="col-auto card">
+					<h3></h3>
+					<img src="" alt="" class="">
+					<span class="badge text-bg-dark"></span>
+				</div>
+				<div class="col-auto card">
+					<h3></h3>
+					<img src="" alt="" class="">
+					<span class="badge text-bg-dark"></span>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

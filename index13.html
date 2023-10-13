@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const task1 = (h, m) => {
+            let pl = 15;
+
+            if(m >= 45){
+                h = h + 1;
+                m = m + pl - 60;
+            }
+            else if(m < 45){
+                m = m + pl;
+            }
+
+            if(h >= 24){
+                h = 0;
+            }
+            m = (m + "").padStart(2, '0');
+            console.log(`${h}:${m}`);
+            // console.log(h+':'+m);
+        }
+
+        let h = '23';
+        let m = '05';
+        task1(parseInt(h),parseInt(m));
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

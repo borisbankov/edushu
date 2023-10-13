@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <style>
+         body {
+         font-family: 'Lato';
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col">
+              <div class="card">
+                 <div class="tweet-list">
+ 					<div class="mx-auto w-50">
+                    <ul class="pagination">
+                       <li class="page-item">
+                          <a class="page-link" href="#"><</a>
+                       </li>
+                       <li class="page-item active">
+                          <a class="page-link" href="#">1</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">4</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">5</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">6</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">7</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">8</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">9</a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#">></a>
+                       </li>
+                    </ul>
+                 </div>
+                    <form action="{{ route('approve-tweets') }}" method="post">
+                       <div class="tweet row">
+                          <div class="col-sm-12">
+                             <div class="media bg-light p-4 m-4 ">
+                                <div class="media-left">
+                                   <img class="img-thumbnail media-object" src="" alt="Avatar">
+                                   <!-- {{ $tweet->user_avatar_url }} -->
+                                </div>
+                                <div class="media-body ml-4">
+                                   <h4 class="media-heading">{{ '@' . $tweet->user_screen_name }}</h4>
+                                   <p>{{ $tweet->text }}</p>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </form>
+                 </div>
+                
+              </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function(event){
+         
+        //    function readTextFile(file, callback) {
+        //      const rawFile = new XMLHttpRequest();
+        //      rawFile.overrideMimeType("application/json; charset=UTF-8");
+        //      rawFile.open("GET", file, true);
+        //      rawFile.onreadystatechange = function() {
+        //          if (rawFile.readyState === 4 && rawFile.status == "200") {
+        //              callback(rawFile.responseText);
+        //          }
+        //        }
+        //        rawFile.send(null);
+        //    }
+        //    readTextFile("https://api.codetabs.com/v1/proxy?quest=http://it.deepcloud.eu/uploads/tweets-en.json", function(text){
+        //        const tweets = JSON.parse(text);
+        //        console.log(tweets[0]);
+
+        //     });
+
+            fetch('https://api.codetabs.com/v1/proxy?quest=http://it.deepcloud.eu/uploads/tweets-en.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data[0]);
+                // data[0].text
+                // data[0].user.profile_image_url
+                // data[0].user.name
+                // data[0].user.screen_name
+
+                for(let i = 0; i < data.length; i++){
+                    let tw = document.querySelector('.tweet');
+                    let clone = tw.cloneNode(true);
+
+                    let avatar = clone.querySelector('img');
+                    let names = clone.querySelector('.media-heading');
+                    let twt = names.nextElementSibling;
+                    avatar.src = data[i].user.profile_image_url;
+                    names.innerText = (i+1) + '. ' + data[i].user.name + ' @ ' + data[i].user.screen_name;
+                    twt.innerText = data[i].text;
+
+                    tw.parentNode.append(clone);
+                    if(i > 9){
+                        clone.style.display = 'none';
+                    }
+                };
+                document.querySelector('.tweet').remove();
+                
+                let navBtns = document.querySelectorAll('.page-link');
+                navBtns.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        // e.target.innerText -> 2
+                        // 11 - 20
+                        let tw = document.querySelectorAll('.tweet');
+                        for(let i = 0; i < tw.length; i++){
+                            if(i >= (parseInt(e.target.innerText) - 1)*10 && i <= parseInt(e.target.innerText)*10 - 1){
+                                tw[i].style.display = 'block';
+                            } else {
+                                tw[i].style.display = 'none';
+                            }
+                        }
+                        document.querySelector('.page-item.active').classList.remove('active');
+                        e.target.parentNode.classList.add('active');
+                    });
+                })
+
+            })
+         }); 
+      </script>
+   </body>
+</html>
