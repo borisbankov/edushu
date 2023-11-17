@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON-LD | Boss Infinite </title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- целта на задачата е да се запознаете със съдържанието на уеб страницата и да подготвите описание от тип Product като намерите до 30 свойства и техните стойности според текста -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Product",
+            "name": "Boss Infinite",
+            "description": "Парфюмът Boss Infinite излиза на 30-ти Март 2019 г. В основата му залягат аромати от ябълка, мандарина, канела и градински чай, лавандула, пачули и розмарин, сандалово дърво и маслиново дърво.",
+            "image": "https://images.hugoboss.com/is/image/boss/hbna58079181_999_200?$re_fullPageZoom$&qlt=85&wid=300&hei=400",
+            "url": "https://www.hugoboss.com/us/boss-bottled-infinite-eau-de-parfum-100ml/hbna58079181_999.html",
+            "audience":
+                {
+                    "@type": "Audience",
+                    "audienceType": "мъже",
+                    "geographicArea":
+                        {
+                            "@type": "AdministrativeArea",
+                            "address":
+                                {
+                                    "@type": "PostalAddress",
+                                    "addressCountry": "България"
+                                }
+                        }
+                },
+            "brand":
+                {
+                    "@type": "Brand",
+                    "name": "Hugo Boss",
+                    "url": "https://www.hugoboss.com"
+                },
+            "isSimilarTo": 
+                {
+                    "@type": "Product",
+                    "name": "Boss The Scent"
+                },
+            "material": 
+                [
+                    "ябълка", "мандарина", "канела", "градински чай", "лавандула", "пачули", "розмарин", "сандалово дърво", "маслиново дърво"
+                ],
+            "offers":
+                [{
+                    "@type": "Offer",
+                    "price": "49.99",
+                    "availability": "InStock",
+                    "priceCurrency": "GBP",
+                    "hasMeasurement": 
+                        {
+                            "@type": "QuantitativeValue",
+                            "unitText": "ml",
+                            "value": "50"
+                        },
+                    "availabilityStarts": "2019-03-30",
+                    "priceValidUntil": "2025-01-01"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "139.00",
+                    "availability": "InStock",
+                    "priceCurrency": "BGN",
+                    "hasMeasurement": 
+                        {
+                            "@type": "QuantitativeValue",
+                            "unitText": "ml",
+                            "value": "50"
+                        },
+                    "availabilityStarts": "2019-03-30",
+                    "priceValidUntil": "2025-01-01"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "183.00",
+                    "availability": "InStock",
+                    "priceCurrency": "BGN",
+                    "hasMeasurement": 
+                        {
+                            "@type": "QuantitativeValue",
+                            "unitText": "ml",
+                            "value": "100"
+                        },
+                    "availabilityStarts": "2019-03-30",
+                    "priceValidUntil": "2025-01-01"
+                }],
+            "category": "мъжки парфюми",
+            "releaseDate": "2019-03-30",
+            "review": 
+                {
+                    "@type": "Review",
+                    "reviewBody": "Мъжът на днешния ден има различни роли в своето ежедневие, независимо дали преследва успеха или се опитва да намери баланс и вътрешен мир. BOSS INFINITE изразява нeговото желание да се наслаждава на живота и да бъде свързан със своето вътрешно Аз. Този енергизиращ и чувствен аромат съчетава свежестта на цитрусовите плодове с интензивността на ароматните и дървесни нотки.",
+                    "reviewRating":
+                        {
+                            "@type": "Rating",
+                            "author": 
+                                {
+                                    "@type": "Person",
+                                    "name": "Борис Банков"
+                                },
+                            "ratingValue": " 4.8/5"
+                        },
+                    "author": 
+                        {
+                            "@type": "Person",
+                            "name": "Борис Банков"
+                        }
+                }
+        }
+    </script>
+    <div class="container mt-2 text-justify">
+        <div class="row pt-2">
+        <img class="col-4" src="https://images.hugoboss.com/is/image/boss/hbna58079181_999_200?$re_fullPageZoom$&qlt=85&wid=300&hei=400">
+        <p class="col-8 pt-5 mt-5">Парфюмът Boss Infinite излиза на 30-ти Март 2019 г. В основата му залягат аромати от ябълка, 
+            мандарина, канела и градински чай, лавандула, пачули и розмарин, сандалово дърво и маслиново дърво. 
+            Тази нова интерпретация на колекцията BOSS Bottled е идеален подарък за съвременния мъж. 
+            Наред с Boss the Scent, линията от мъжки аромати за 2019 г. на Hugo Boss е сред най-търсените по празниците. 
+        </br>
+        Рекламната кампания се оглави от холивудския актьор Chris Hemsworth, като мотото е "THE MAN OF TODAY".
+        <br>
+        Цената за 50 ml Boss Infinite e £49.99 на британския пазар. На българския пазар 50 ml може да бъде закупен за 139.00 лв от Douglas / Beauty Zone, 
+        докато 100ml е 183.00 лв.
+        За повече информация, посетете официалния уеб сайт на марката 
+        <a href="https://www.hugoboss.com/us/boss-bottled-infinite-eau-de-parfum-100ml/hbna58079181_999.html">Hugo Boss</a> 
+        </p>
+        
+        </p>
+        <p>Ето и нашата оценка за артикула:
+            <blockquote> 
+                Мъжът на днешния ден има различни роли в своето ежедневие, независимо дали преследва успеха или се опитва да намери баланс и вътрешен мир. BOSS INFINITE изразява нeговото желание да се наслаждава на живота и да бъде свързан със своето вътрешно Аз. Този енергизиращ и чувствен аромат съчетава свежестта на цитрусовите плодове с интензивността на ароматните и дървесни нотки. 
+            </blockquote>
+            Оценка: 4.8/5 
+        </p>
+    </div>
+    </div>
+</body>
+</html>
