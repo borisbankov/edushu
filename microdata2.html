@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+    <div itemscope itemtype="https://schema.org/Movie">
+        <a href="https://www.imdb.com/title/tt0095016/?ref_=nv_sr_srsg_0" itemprop="url">https://www.imdb.com/title/tt0095016/?ref_=nv_sr_srsg_0</a>
+        <h1 itemprop="name">Умирай трудно</h1>
+        <img itemprop="image" src="https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="">
+        <div>
+            Година на излизане<span itemprop="dateCreated">1988-07-20</span>
+        </div> 
+        <div>
+            Режисьор: <span itemprop="director">Джон МкТиернан</span>
+        </div>
+        <ul itemscope itemtype="https://schema.org/Review" itemprop="review">
+            <li itemscope itemtype="https://schema.org/Rating" itemprop="reviewRating">
+                Оценка: <span itemprop="ratingValue">5</span>
+            </li>
+            <li itemscope itemtype="https://schema.org/Person" itemprop="author">
+                Автор: <span itemprop="name">Роджър Еберт</span>
+            </li>
+            <li itemprop="reviewBody">
+                Сюжетът на филма има известен чар: ченге се намира в капан - небостъргач, похитен от група отчаяни терорирсти навръх Коледа. Той трябва да спаси заложниицте, сред които е й жена му. Главният злодей има мотив, ум и характер. Елементите са достатъчни за развлекателен филм.
+            </li>
+        </ul>
+        <div itemscope itemtype="https://schema.org/AggregateRating" itemprop="aggregateRating">
+            <div>Средна оценка: <span itemprop="ratingValue">72 </span></div>
+			<div>Най-висока оценка: <span itemprop="bestRating">100 </span></div>
+			<div>Брой ревюта: <span itemprop="ratingCount">1115 </span></div>
+        </div>
+    </div>
+
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Movie",
+		"url": "https://www.imdb.com/title/tt0095016/?ref_=nv_sr_srsg_0",
+		"name": "Умирай трудно",
+		"image": "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+		"dateCreated": "1988-07-20",
+		"director": "Джон МкТиернан",
+		"review": {
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Роджър Еберт"
+			},
+			"reviewBody": "Сюжетът на филма има известен чар: ченге се намира в капан - небостъргач, похитен от група отчаяни терорирсти навръх Коледа. Той трябва да спаси заложниицте, сред които е й жена му. Главният злодей има мотив, ум и характер. Елементите са достатъчни за развлекателен филм."
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "72",
+			"bestRating": "100",
+			"ratingCount": "1115"
+		}
+	}    
+</script>
+</body>
+</html>
